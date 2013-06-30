@@ -1,1 +1,51 @@
-#memos tr:hover {cursor: pointer;}
+#memos tr:hover {
+	cursor: pointer;
+}
+
+#footer {
+	margin-left: 625px;
+}
+
+.container-mymemo {
+	border-style: solid;
+	border-width: 1px;
+	width: 580px;
+	margin-top: 20px;
+}
+
+.div-btn-memorizar {
+	padding-bottom: 9px;
+	margin-top: 20px;
+	display: -webkit-box;
+}
+
+.div-textarea-memorizar {
+	margin-top: 20px;
+}
+
+.div-buscar-item-memorizado {
+	margin-top: 20px;
+}
+
+.btn-memorizar {
+	margin-left: 240px;
+	margin-top: 10px;
+}
+
+.textarea-memorizar {
+	margin: 0px 0px 10px;
+	width: 525px;
+	height: 103px;
+	margin-left: -8px;
+}
+
+.buscar-item-memorizado {
+	width: 457px;
+	height: 30px;
+	margin-left: -8px;
+}
+
+.table-itens-memorizados {
+	width: auto;
+	margin-left: -15px;
+}

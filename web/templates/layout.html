@@ -2,6 +2,7 @@
 <html lang='pt-BR'>
   <head>
     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyMemos</title>
     <link href="{{ static_url("css/bootstrap.css") }}"            rel="stylesheet">
     <style>
@@ -31,13 +32,18 @@
     </div>
 
     <div class="container">
-
       {% block body %}{% end %}
-
     </div> <!-- /container -->
 
 
-  <script src="{{ static_url("js/jquery.min.js") }}"></script>
+	<div id="footer">
+			{% block footer %} {% end %}
+ 			<p class="muted">
+				MyMemo App - <a href="#">Soliva </a> and <a href="#">Soeiro</a>.
+			</p>
+ 	</div>
+
+	<script src="{{ static_url("js/jquery.min.js") }}"></script>
   <script src="{{ static_url("js/bootstrap.min.js") }}"></script>
   </body>
 </html>

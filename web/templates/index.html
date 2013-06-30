@@ -1,51 +1,94 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block body %}
 
-{% block body %}
+<div class="span6 offset2" style="padding: 10px;">
 
-<div class="span6 offset2" style="padding:10px;">
-	
 	{% if message %}
 	<div class="alert alert-success">
-	  <button type="button" class="close" data-dismiss="alert">×</button>
-	  {{message}}
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		{{message}}
 	</div>
 	{% end %}
-  	
-  	<fieldset>
-    	
-  		<legend>Memorizar</legend>
-		<form action="/" method="post">
-    		<textarea class="span6" name="memo"></textarea>
-  			<input type="submit" value="Gravar" class="btn btn-primary">
-  		</form>
 
-  		<table class="table table-striped " style="table-layout: fixed; width: 100%" id="memos">
-  			<tr >
-  				<td style="word-wrap: break-word; width:80%">
-  					DIVE INTO HTML5: <a href="#">http://diveintohtml5.com.br/</a> <a href="#">#livro</a> <a href="#">#HTML5</a>
-  				</td>
-  				<td>
-  					16/10/13
-  				</td>
-  			</tr>
-  			<tr>
-  				<td style="word-wrap: break-word; width:80%">
-  					<a href="#">#python</a> <a href="#">#github</a> <a href="#">https://github.com/marcelnicolay/mongotor</a>
-  				</td>
-  				<td>
-  					15/05/13
-  				</td>
-  			</tr>
-  			<tr>
-  				<td style="word-wrap: break-word; width:80%">
-  					<a href="#">#lugarLegal</a> esquina da 5a av. com a 42 loja de equipamentos de espionagem
-  				</td>
-  				<td>
-  					15/05/13
-  				</td>
-  			</tr>
-  		</table>
-  	</fieldset>
+	<div class="span7 div-btn-memorizar">
+		<h1>MyMemo</h1>
+		<button class="btn btn-large btn-primary btn-memorizar" type="button">Memorizar</button>
+	</div>
+
+	<div class="span7 div-textarea-memorizar">
+		<textarea class="textarea-memorizar" cols="" rows=""></textarea>
+	</div>
+
+	<div class="span7 div-buscar-item-memorizado input-append	">
+		<input type="text" class="buscar-item-memorizado"
+			placeholder="digite o item que gostaria de relembrar">
+		<button type="submit" class="btn">Buscar</button>
+
+	</div>
+
+
+	<div class="span7" style="margin-top: 20px;">
+
+		<table class="table table-itens-memorizados ">
+			<tbody>
+				<tr>
+
+					<td>
+						<div class="accordion" style="width: 530px;">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse"
+										data-parent="#accordion" href="#collapseOne"> ultimas
+										semanas</a>
+								</div>
+
+								<!-- inner accordion -->
+								<div id="collapseOne">
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a class="accordion-toggle" data-toggle="collapse"
+												data-parent="#collapseOne" href="#innerCollapseOne">item
+												1 memorizado </a>
+										</div>
+										<div id="innerCollapseOne" class="accordion-body collapse in">
+											<div class="accordion-inner">dsc do Item #1memorizado.</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="accordion2" style="width: 530px;">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse"
+										data-parent="#accordion2" href="#collapseOne2"> Livros
+										legais</a>
+								</div>
+
+								<!-- inner accordion -->
+								<div id="collapseOne2">
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a class="accordion-toggle" data-toggle="collapse"
+												data-parent="#collapseOne2" href="#innerCollaps2eOne">item
+												2 memorizado </a>
+										</div>
+										<div id="innerCollaps2eOne" class="accordion-body collapse in">
+											<div class="accordion-inner">dsc do Item #1memorizado.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
 
 </div>
 
