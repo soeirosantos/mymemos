@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="span6 offset2" style="padding:10px;">
+	
+	{% if message %}
+	<div class="alert alert-success">
+	  <button type="button" class="close" data-dismiss="alert">×</button>
+	  {{message}}
+	</div>
+	{% end %}
+  	
+  	<fieldset>
+    	
+  		<legend>Memorizar</legend>
+		<form action="/" method="post">
+    		<textarea class="span6" name="memo"></textarea>
+  			<input type="submit" value="Gravar" class="btn btn-primary">
+  		</form>
+
+  		<table class="table table-striped " style="table-layout: fixed; width: 100%" id="memos">
+  			<tr >
+  				<td style="word-wrap: break-word; width:80%">
+  					DIVE INTO HTML5: <a href="#">http://diveintohtml5.com.br/</a> <a href="#">#livro</a> <a href="#">#HTML5</a>
+  				</td>
+  				<td>
+  					16/10/13
+  				</td>
+  			</tr>
+  			<tr>
+  				<td style="word-wrap: break-word; width:80%">
+  					<a href="#">#python</a> <a href="#">#github</a> <a href="#">https://github.com/marcelnicolay/mongotor</a>
+  				</td>
+  				<td>
+  					15/05/13
+  				</td>
+  			</tr>
+  			<tr>
+  				<td style="word-wrap: break-word; width:80%">
+  					<a href="#">#lugarLegal</a> esquina da 5a av. com a 42 loja de equipamentos de espionagem
+  				</td>
+  				<td>
+  					15/05/13
+  				</td>
+  			</tr>
+  		</table>
+  	</fieldset>
+
+</div>
+
+{% end %}

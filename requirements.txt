@@ -1,0 +1,3 @@
+pymongo>=2.3
+tornado>=2.2
+asyncmongo

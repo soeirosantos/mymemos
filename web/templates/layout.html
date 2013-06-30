@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='pt-BR'>
+  <head>
+    <meta charset="UTF-8">
+    <title>MyMemos</title>
+    <link href="{{ static_url("css/bootstrap.css") }}"            rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="{{ static_url("css/bootstrap-responsive.css") }}" rel="stylesheet">
+    <link href="{{ static_url("css/base.css") }}"                 rel="stylesheet">
+
+    <link href="{{ static_url("img/favicon.ico") }}"              rel="shortcut icon"> 
+    <script src="{{ static_url("js/application.js") }}"  ></script>
+    {% block head %}{% end %}
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/">MyMemos</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      {% block body %}{% end %}
+
+    </div> <!-- /container -->
+
+
+  <script src="{{ static_url("js/jquery.min.js") }}"></script>
+  <script src="{{ static_url("js/bootstrap.min.js") }}"></script>
+  </body>
+</html>
